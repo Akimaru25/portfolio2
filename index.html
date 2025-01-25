@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Thème Bleu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Thème bleu modernisé avec effet parallax */
+        body {
+            font-family: 'Raleway', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0d1b2a; /* Bleu foncé */
+            color: #e0e1dd; /* Texte clair */
+        }
+
+        nav {
+            background: #1b263b;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 15px 30px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #a9d6e5;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #61a5c2;
+        }
+
+        .parallax {
+            position: relative;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #e0e1dd;
+            text-align: center;
+        }
+
+        .parallax:first-child {
+            background-image: url('https://via.placeholder.com/1920x1080/1b263b/61a5c2');
+        }
+
+        .parallax:nth-child(2) {
+            background-image: url('https://via.placeholder.com/1920x1080/243447/61a5c2');
+        }
+
+        .parallax h1 {
+            font-size: 3.5em;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .content-section {
+            padding: 60px 20px;
+            background-color: #1b263b;
+            text-align: center;
+            color: #e0e1dd;
+        }
+
+        .content-box {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px;
+            background: #243447;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            color: #a9d6e5;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background: #1b263b;
+            padding: 20px;
+            text-align: center;
+            color: #e0e1dd;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1em;
+        }
+
+        /* Carrousel */
+        #carousel-section {
+            padding: 50px 20px;
+            background: #1b263b;
+            text-align: center;
+        }
+
+        #carousel-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            height: 1000px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        #carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        #carousel img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            font-size: 2em;
+            cursor: pointer;
+            z-index: 10;
+            padding: 10px;
+            border-radius: 50%;
+        }
+
+        #prev {
+            left: 10px;
+        }
+
+        #next {
+            right: 10px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#about-me">Présentation</a></li>
+            <li><a href="#skills">Compétences</a></li>
+            <li><a href="#projects">Projets</a></li>
+            <li><a href="#carousel-section">Carrousel</a></li>
+        </ul>
+    </nav>
+
+    <div class="parallax">
+        <h1>Bienvenue sur mon Portfolio</h1>
+    </div>
+
+    <section id="about-me" class="content-section">
+        <div class="content-box">
+            <h2>À propos de moi</h2>
+            <p>Je suis un étudiant passionné par les réseaux et la cybersécurité, avec l'ambition de devenir ingénieur dans ces domaines. Découvrez mon parcours et mes compétences.</p>
+        </div>
+    </section>
+
+    <div class="parallax">
+        <h1>Mes Projets</h1>
+    </div>
+
+    <section id="projects" class="content-section">
+        <div class="content-box">
+            <h2>Projets</h2>
+            <p>Voici quelques projets sur lesquels j'ai travaillé, mettant en avant mes compétences en réseaux, cybersécurité et développement.</p>
+        </div>
+    </section>
+
+    <!-- Section du carrousel -->
+    <section id="carousel-section">
+        <div id="carousel-wrapper">
+            <button id="prev" class="carousel-btn">❮</button>
+            <div id="carousel">
+                <img src="images/image1.jpg" alt="Image 1">
+                <img src="images/image2.jpg" alt="Image 2">
+                <img src="images/image3.jpg" alt="Image 3">
+            </div>
+            <button id="next" class="carousel-btn">❯</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Mon Portfolio - Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        const carousel = document.getElementById('carousel');
+        const images = carousel.querySelectorAll('img');
+        const prevBtn = document.getElementById('prev');
+        const nextBtn = document.getElementById('next');
+        let index = 0;
+
+        function showImage(idx) {
+            carousel.style.transform = `translateX(${-idx * 100}%)`;
+        }
+
+        function nextImage() {
+            index = (index + 1) % images.length;
+            showImage(index);
+        }
+
+        function prevImage() {
+            index = (index - 1 + images.length) % images.length;
+            showImage(index);
+        }
+
+        nextBtn.addEventListener('click', nextImage);
+        prevBtn.addEventListener('click', prevImage);
+
+        setInterval(nextImage, 5000); // Défilement automatique toutes les 5 secondes
+    </script>
+</body>
+</html>
