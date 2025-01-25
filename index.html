@@ -165,15 +165,63 @@
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
+
+        #projects h2 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            text-align: center; /* Centrer le titre */
+        }
+
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap; /* Permet de passer à la ligne suivante si nécessaire */
+            justify-content: center; /* Aligne les cartes à gauche */
+            gap: 20px;
+            max-width: 1200px; /* Limiter la largeur des cartes pour ne pas les étirer */
+            margin: 0 auto;
+        }
+
+        /* Style pour les cartes */
+        .card {
+            background: #243447;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+            cursor: pointer;
+            text-align: left;
+            color: #e0e1dd;
+            width: 300px; /* Taille fixe pour que toutes les cartes aient la même largeur */
+            height: 300px; /* Taille fixe pour que toutes les cartes aient la même hauteur */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Pour espacer les éléments à l'intérieur de la carte */
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h3 {
+            color: #a9d6e5;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #e0e1dd;
+            flex-grow: 1; /* Pour que le texte s'ajuste bien dans la carte sans déborder */
+        }
+
     </style>
 </head>
 <body>
     <nav>
         <ul>
             <li><a href="#about-me">Présentation</a></li>
-            <li><a href="#skills">Compétences</a></li>
             <li><a href="#projects">Projets</a></li>
             <li><a href="#carousel-section">Carrousel</a></li>
+            <li><a href="">Spécialté</a></li>
+            <li><a href="">Contact</a></li>
         </ul>
     </nav>
 
@@ -184,20 +232,61 @@
     <section id="about-me" class="content-section">
         <div class="content-box">
             <h2>À propos de moi</h2>
-            <p>Je suis un étudiant passionné par les réseaux et la cybersécurité, avec l'ambition de devenir ingénieur dans ces domaines. Découvrez mon parcours et mes compétences.</p>
-        </div>
-    </section>
+            <p align="justify">Je m'appelle Matéo Chevassu, j'ai 21ans, je suis étudiant en troisième année de Bachelor Universitaire de Technologie Réseaux et Télécommunications, ou BUT R&T, spécialité Cybersécurité de l'Institut Universitaire de Technologie Nord Franche-Comté. J'effectue ce BUT en alternance au sein d'une entreprise nommé ABEO depuis ma deuxième année au sein du service informatique.
 
-    <div class="parallax">
-        <h1>Mes Projets</h1>
-    </div>
+                J'ai choisi de faire mes études dans le domaine des réseaux et télécommunications  , car j’ai toujours été attiré par l’informatique depuis mon enfance. De plus, j'ai également des membres de ma famille qui travaillent aussi dans ce domaine.</p>
+            <h2>Expériences professionnelles</h2>
+            <li>
+                <strong>ALTERNANCE CHEZ ABEO | RIOZ (25)</strong><br>
+                Mai 2022 à Mai 2027<br>
+                <p align="justify">
+                Au sein d'une équipe, j'ai pour mission d'assister et d'accompagner des utilisateurs, de gérer la supervision informatique et d'assister l'administrateur système et réseaux dans divers sujets.
+                </p>
+            </li>
+            <br>
+            <li>
+                <strong>RÉSERVISTE ARMÉE DE TERRE (19ème régiment du génie)</strong><br>
+                Septembre 2023 à Septembre 2025<br>
+                <p align="justify">
+                Dans la réserve, j'ai pour mission d'assister l'armée active dans diverses opérations.
+                </p>
+            </li>
+            <h2>Projet professionnel</h2>
+                <p align="justify">Je souhaite intégré l'armée de terre dans l'active en restant dans le domaine de la cybersécurité</p> 
+            <h2>Mes qualités</h2>
+            <p>    
+                <li>Volontaire</li>
+                <li>Sérieux</li>
+                <li>Motivé</li>
+                <li>Ambitieux</li>
+            </p> 
+            </div>       
+            </section>
 
     <section id="projects" class="content-section">
-        <div class="content-box">
-            <h2>Projets</h2>
-            <p>Voici quelques projets sur lesquels j'ai travaillé, mettant en avant mes compétences en réseaux, cybersécurité et développement.</p>
+        
+        <h2>Mes Projets</h2>
+        <div class="cards-container">
+            <div class="card">
+                <h3>Projet 1</h3>
+                <p>Une description du premier projet...</p>
+            </div>
+            <div class="card">
+                <h3>Projet 2</h3>
+                <p>Une description du deuxième projet...</p>
+            </div>
+            <div class="card">
+                <h3>Projet 3</h3>
+                <p>Une description du troisième projet...</p>
+            </div>
+            <div class="card">
+                <h3>Projet 4</h3>
+                <p>Une description du troisième projet...</p>
+            </div>
         </div>
     </section>
+
+
 
     <!-- Section du carrousel -->
     <section id="carousel-section">
