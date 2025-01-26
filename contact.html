@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0d1b2a; /* Bleu foncé */
+            color: #e0e1dd; /* Texte clair */
+        }
+
+        nav {
+            background: #1b263b;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 15px 30px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #a9d6e5;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #61a5c2;
+        }
+
+        .content-section {
+            padding: 60px 20px;
+            text-align: center;
+            color: #e0e1dd;
+        }
+
+        h2 {
+            color: #a9d6e5;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #243447;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-form label {
+            display: block;
+            text-align: left;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+            color: #a9d6e5;
+        }
+
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            box-sizing: border-box;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            background: #1b263b;
+            color: #e0e1dd;
+        }
+
+        .contact-form textarea {
+            resize: none;
+            height: 150px;
+        }
+
+        .contact-form button {
+            background: #61a5c2;
+            color: #0d1b2a;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .contact-form button:hover {
+            background: #a9d6e5;
+        }
+
+        footer {
+            background: #1b263b;
+            padding: 20px;
+            text-align: center;
+            color: #e0e1dd;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="specialite.html">Spécialté</a></li>
+        </ul>
+    </nav>
+
+    <section class="content-section">
+        <h2>Contactez-moi</h2>
+        <div class="contact-form">
+            <form action="submit_form.php" method="POST">
+                <label for="name">Mon e-mail : chevassu.mateo@yahoo.com</label>         
+
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Mon Portfolio - Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
